@@ -1,7 +1,7 @@
 ---
 title: "Trying out Stylable.io"
 description: "Stylable is a new way to style your react components created by Wix that uses the full power of CSS for the writing and syntax and the…"
-date: "2019-06-01T15:45:39.605Z"
+date: "2019-06-01T15:48:49.211Z"
 categories: []
 published: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Let’s talk about Airports"
 description: "So this year I have seen a lot of airports and I think it’s time for me to write about this so y’all know what level of bullshit each of…"
-date: "2019-06-01T15:45:48.553Z"
+date: "2019-06-01T15:48:52.840Z"
 categories: []
 published: false
 ---

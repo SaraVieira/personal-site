@@ -27,7 +27,7 @@ Open you favourite code editor if you don’t have one you can download [Atom](h
 
 Open the main css/sass/less/postcss of your page and add the following two lines:
 
-Embed placeholder 0.3280841830153052
+Embed placeholder 0.9585307470370075
 
 ---
 

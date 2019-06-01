@@ -1,7 +1,7 @@
 ---
 title: "Let’s make a theme switcher with CSS Variables"
 description: "CSS Variables also known as CSS custom properties are here:"
-date: "2019-06-01T15:45:34.283Z"
+date: "2019-06-01T15:48:47.270Z"
 categories: []
 published: false
 ---
@@ -24,7 +24,7 @@ We will be going to create a webpage that will have theme switcher that will all
 
 We will be doing all of this with no frameworks and just using CSS variables.
 
-Embed placeholder 0.2542750578780717
+Embed placeholder 0.5081806767906669
 
 This was done in [CodeSanbox](https://codesanbox.io) so you can make a new VanillaJS sandbox [here](https://codesandbox.io/s/vanilla) to follow along. 
 

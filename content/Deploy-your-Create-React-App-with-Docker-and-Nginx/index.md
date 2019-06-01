@@ -29,7 +29,7 @@ We will now need to create a nginx configuration for our server. The reason I ch
 
 A configuration file for nginx is a nginx_.conf_ file so let’s start by creating that file and start coding it:
 
-Embed placeholder 0.5759389507697961
+Embed placeholder 0.4778393443621556
 
 This is a pretty standard configuration for nginx and we tell it where to show our files and what the cache expiration date is. There is also some helpers for 404 and logs.
 
@@ -39,7 +39,7 @@ We don’t enable gzip here but for an example with it you can look [here](https
 
 Now that we have our nginx config we can now create our [_Dockerfile_](https://medium.com/yld-engineering-blog/when-should-i-use-docker-77ae2736a487) and we will start by stating what is the base image we will be using:
 
-Embed placeholder 0.47100632253969477
+Embed placeholder 0.4777285284882118
 
 After this we need to tell docker what it needs to run our app and in this case we need to do three things:
 
@@ -49,21 +49,21 @@ After this we need to tell docker what it needs to run our app and in this case 
 
 Details on how to do this are below:
 
-Embed placeholder 0.503942930455243
+Embed placeholder 0.6655652056078076
 
 Now to finish our _Dockerfile_ we need to tell it what command to run and for that we will the nginx cli and pass it as the entrypoint in our _Dockerfile_:
 
-Embed placeholder 0.4838791566994982
+Embed placeholder 0.6214610954595468
 
 As you can see we run nginx with _\-g daemon off;_ so that nginx stays in the foreground so that Docker can track the process properly (otherwise your container will stop immediately after starting). You can read more about this [here](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/).
 
 You can now build and tag this image with:
 
-Embed placeholder 0.40451054295863176
+Embed placeholder 0.798202450167482
 
 And then run it with:
 
-Embed placeholder 0.548122192194312
+Embed placeholder 0.7060867792605148
 
 If you use [now](https://now.sh) you can just deploy this as it is and now will build and run the image on their own servers.
 

@@ -28,17 +28,17 @@ Chill guys, you know these articles need a intro first.
 
 Okay so let’s imagine you have this component:
 
-Embed placeholder 0.16010359182378986
+Embed placeholder 0.08919809787709276
 
 So the Section and Paragraph don’t contain any props so they are the easier to separate and we will move those first.
 
 Let’s create a _style.js_ with the following code:
 
-Embed placeholder 0.37300838765447786
+Embed placeholder 0.6791163741180759
 
 So now in our index we can delete the code and replace it with regular imports:
 
-Embed placeholder 0.004418055577953162
+Embed placeholder 0.5452260209568895
 
 Cleaner ah ? 😉
 
@@ -48,11 +48,11 @@ The solution is to use the [_css_](https://www.styled-components.com/docs/api#cs
 
 Our _style.js_ will now look like this:
 
-Embed placeholder 0.6478321627008492
+Embed placeholder 0.06825395143999469
 
 And our _index.js:_
 
-Embed placeholder 0.8339346789713973
+Embed placeholder 0.530018703112006
 
 We still need to instantiate the component in the index because what we did only created the CSS not the react component but I find this a cleaner way of writing CSS in JS.
 
@@ -62,13 +62,13 @@ All of this is of personal opinion of course, you may like your styles next to y
 
 Well… when you use the _css_ approach you loose the extend but you can also concatenate styles like this:
 
-Embed placeholder 0.3362245343026693
+Embed placeholder 0.7531651502101104
 
 It’s not perfect but I am happy about it as middle term to having all of these separated.
 
 I think this can give you a lot of flexibility, for example in one of my projects I have a file only for animations like so:
 
-Embed placeholder 0.2942518460117529
+Embed placeholder 0.36895628663069724
 
 This way I can have the best of both worlds ! Some Javascript in my CSS and neatly separated files like my brain desires so much.
 

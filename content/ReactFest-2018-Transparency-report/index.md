@@ -1,7 +1,7 @@
 ---
 title: "ReactFest 2018 Transparency report"
 description: "Before starting I want to thank Greta for her continuous efforts to make this conference happen and to make working at YLD more and more…"
-date: "2019-06-01T15:45:43.437Z"
+date: "2019-06-01T15:48:50.564Z"
 categories: []
 published: false
 ---
@@ -59,7 +59,7 @@ I must admit this is the biggest first world problem I have ever faced in my lif
 
 So that’s it for today, any questions or remarks about this you can always reach us on [Twitter](https://twitter.com/ReactFest) and we will love to answer any questions you may have.
 
-Embed placeholder 0.8834373408900653
+Embed placeholder 0.8168003817594369
 
 **Thank You**
 

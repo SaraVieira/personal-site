@@ -1,7 +1,7 @@
 ---
 title: "Build dumb things!"
 description: "Hey 👋"
-date: "2019-06-01T15:45:37.767Z"
+date: "2019-06-01T15:48:47.738Z"
 categories: []
 published: false
 ---

@@ -6,7 +6,7 @@
   "author": "Sara Vieira <hey@iamsaravieira.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SaraVieira/personal-site.git"
+    "url": "git+https://github.com/.git"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.0.16",

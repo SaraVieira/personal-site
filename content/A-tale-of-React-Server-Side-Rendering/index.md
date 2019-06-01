@@ -41,17 +41,17 @@ React Router is the best, we all know that but what I didn’t know is that serv
 
 So in your app that is isomorphic you place all the routes but without the actual react-router provider like so:
 
-Embed placeholder 0.2940825720482776
+Embed placeholder 0.39210344818745524
 
 In the actual client.js you place the provider since this will only run on the client but the routes are for everything:
 
-Embed placeholder 0.8654441712475394
+Embed placeholder 0.2819411735439068
 
 Why isomorphic-fetch? You never know in these things!
 
 What about the server? Well you just have to wrap your component to be SSR’d in a Static Router and that is about the only change you need to do:
 
-Embed placeholder 0.3194638326879087
+Embed placeholder 0.3817774821066193
 
 That’s it! Those are the only differences we have to make in the server.js to get React Router working on the server as well 😀
 
@@ -63,13 +63,13 @@ Font Awesome was implemented in a way where only the icons we needed were import
 
 There is a icons.js with:
 
-Embed placeholder 0.7877440784766765
+Embed placeholder 0.29712467869200276
 
 Notice the config where we tell font awesome that we will add the CSS and instead of it being added by the fontawesome package automatically. After that, this file needs to be imported into our app.js, but on this side, that is it. You just need to know that this config exists.
 
 Then on the server some markup had to be modified for us to add the actual CSS:
 
-Embed placeholder 0.8396674431725835
+Embed placeholder 0.07614213316857055
 
 By adding **_<style>${fontawesome.dom.css()}</style>_** we now have perfect icons on both the client and the server and we can carry on.
 
@@ -79,7 +79,7 @@ Here is a [link to actual PR](https://github.com/SaraVieira/awesome-talks/pull/4
 
 Their docs are actually very good so you can see them [here](https://github.com/nfl/react-helmet#server-usage) but what you need to change on the server is:
 
-Embed placeholder 0.14856197145062233
+Embed placeholder 0.47590660355619163
 
 There are no changes needed on the client and your SEO will be on fleek from now!
 
@@ -87,15 +87,15 @@ There are no changes needed on the client and your SEO will be on fleek from now
 
 These docs are also pretty amazing so let’s start by the changes in the server. First thing we need to do is wrap our root component in their theme provider because I am also using themes with styled components, so our root components will look like:
 
-Embed placeholder 0.31768451634287254
+Embed placeholder 0.7087354005845474
 
 After this provider component has been added to our root, we can follow the [docs](https://www.styled-components.com/docs/advanced#server-side-rendering) that tell us to create a new server stylesheet, collect the styles of the Root and get the style tags so this means we need to add this code:
 
-Embed placeholder 0.9192949788192473
+Embed placeholder 0.3704207798794219
 
 And now add these tags into the response we send to the client:
 
-Embed placeholder 0.17394422038239576
+Embed placeholder 0.025744601674155376
 
 Now a word of warning: I also had some globally injected styles for the body and general clean up of the page and these were being ignored by the SSR.
 
@@ -103,7 +103,7 @@ This was happening because I was importing them in the client.js instead of the 
 
 If you have any type of global styles make sure to import them in the isomorphic part of the app like so:
 
-Embed placeholder 0.6654350479942777
+Embed placeholder 0.3204474763731606
 
 And you are all set for styled components and now Apollo !
 
@@ -113,7 +113,7 @@ I love Apollo, I do, but this was a pain also because I started with Apollo Boos
 
 Let’s start by getting the place where we create the Apollo Client away from the main initial files and put it into a file that in my case looked something like:
 
-Embed placeholder 0.53779641901159
+Embed placeholder 0.8850674598317751
 
 And now you are thinking: What is this process.browser ? It’s just a way of figuring out if we are on the client or the server and render accordingly.
 
@@ -123,11 +123,11 @@ And now comes this cache thing. So the way Apollo handles SSR is a little like s
 
 On the server there is a bunch of stuff we need to do, first thing is wrap our Root in the Apollo Provider:
 
-Embed placeholder 0.47105988755177686
+Embed placeholder 0.20765242575917853
 
 After this we need to use **_getDataFromTree_** and what this function does is get all the queries you have in your page and fetches them all and returns a promise, after this promise is resolved we can actually get the initialState and place it in the response like so:
 
-Embed placeholder 0.9853555044705378
+Embed placeholder 0.11442981344051395
 
 And this is where Apollo gets the initial state we saw in the in the above code and like this Apollo will render everything like magic.
 

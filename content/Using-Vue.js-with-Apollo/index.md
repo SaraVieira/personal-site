@@ -39,15 +39,15 @@ If you started with the [vue-cli](https://github.com/vuejs/vue-cli) or Codesanbo
 
 First thing is to import what we need from apollo-boost and vue-apollo:
 
-Embed placeholder 0.9527747101543032
+Embed placeholder 0.3715822956926955
 
 After importing this we will initialise vue-apollo by passing a uri to the ApolloClient and telling vue to use vue apollo as a plugin.
 
-Embed placeholder 0.7276829435188898
+Embed placeholder 0.6748267123452611
 
 Last step of our set up is to set up our provider to be the apolloProvider:
 
-Embed placeholder 0.19020518307165157
+Embed placeholder 0.4827072029313577
 
 All setup is done and now we can start writing them queries.
 
@@ -61,11 +61,11 @@ In the app.vue I just imported the Form component that will hold our mutation to
 
 My app.vue looks like this:
 
-Embed placeholder 0.5369037183414709
+Embed placeholder 0.9532686593336182
 
 The queries.js file just contains all the queries we need to make requests to the server and the code is:
 
-Embed placeholder 0.40719225547731686
+Embed placeholder 0.4946387885849928
 
 ### Let’s get them names !
 
@@ -73,7 +73,7 @@ Let’s start hacking our Names.vue and get the names.
 
 First thing we need to do is import our query and also start our ApolloQuery component, like so:
 
-Embed placeholder 0.5966568044429057
+Embed placeholder 0.5474151073479612
 
 First thing I did was import the GET\_NAMES query from our queries.js file and set it as the query property on the data so that we can call it in our template.
 
@@ -81,23 +81,23 @@ After that I initialised the ApolloQuery component passing it the same query we 
 
 Inside this template let’s first check if it’s loading or there is an error and we do that by creating two elements that check for those propreties:
 
-Embed placeholder 0.033356868382220295
+Embed placeholder 0.7258890842153989
 
 Now that we got ourselves covered and know that when the section is rendered we have some data we can start by just displaying a list of all the names that come from our server using:
 
-Embed placeholder 0.7837971472242293
+Embed placeholder 0.6829214273557045
 
 If you try this code you see that we can indeed see the names in the page but there is a small problem we haven’t defended against, what if there is data but the server has no names ?
 
 Right now we get an empty ul but we can fix this by checking for the length of the allNameses property in data and only if it has any names we render the ul, in the case it doesn’t we will just render a span that tells the user there are no names in the server.
 
-Embed placeholder 0.3675169044768336
+Embed placeholder 0.5653713596708254
 
 Awesome we got our bases covered here !
 
 In this case we didn’t need any variables but in case we did we just need to add a prop to the ApolloQuery component called variables that accepts an object with all the variables you need.
 
-Embed placeholder 0.7334670706447983
+Embed placeholder 0.9169634552319559
 
 ### Add them names son !
 
@@ -105,7 +105,7 @@ Let’s move to our Form.vue where we will add our name to the server using a mu
 
 First thing is import the mutation query from our queries.js and also create a simple form to hold the name the user inputs, your component should look something like:
 
-Embed placeholder 0.296477490493648
+Embed placeholder 0.6992288534535946
 
 So far we have a pretty standard form, it just has one input that has a model for some two way data binding and also calls a method on submit.
 
@@ -113,19 +113,19 @@ The .prevent you see after the v-on:submit simply tells vue to prevent default 
 
 Let’s create our method:
 
-Embed placeholder 0.9940118690496476
+Embed placeholder 0.6128525663508464
 
 All we really doing here is saving the users input in a variable called name because we want to clear the input before we actually start the mutation.
 
 To start the actual mutation we call:
 
-Embed placeholder 0.11638621594397436
+Embed placeholder 0.9637574085339584
 
 As you can see we call this.$apollo.mutate and we are able to do this since we instructed vue to use the apollo in our main.js. In the actual call we pass in the mutation and also all the variables we need for the mutation to occur.
 
 If you try to add a name now and then reload the page we see that our mutation occurs and we get the new name inserted but this is not the desired outcome, we should see the the added after the mutation is done and we can do that by updating the cache in an update function that vue-apollo provides:
 
-Embed placeholder 0.30988836021837374
+Embed placeholder 0.25457330727634475
 
 In our update function we read all the names we have with our GET\_NAMES query and then concat the name we just added to that array so that we can see the changes right after the mutation completes with success.
 
@@ -133,7 +133,7 @@ In our update function we read all the names we have with our GET\_NAMES query a
 
 We need to add a catch to our mutate function since this returns a promise. If there is an error we need to add the name the user tried to add back in the input and also populate the error key in our data object so that we can access this in the template and show the user the error:
 
-Embed placeholder 0.12201728038844961
+Embed placeholder 0.22618684529560573
 
 After adding this to show the error to the user we just need to add:
 
@@ -153,7 +153,7 @@ In this case we can add it at ease because it will be reverted and the catch sta
 
 vue-apollo has a really handy optimisticResponse method in the mutate function that we can use to send a fake response and update the cache. In here we send exactly what we expect to receive from the server so we send:
 
-Embed placeholder 0.9446402092974384
+Embed placeholder 0.528355237797433
 
 Only difference as you can see is that we send a fake id as this one will be updated as soon as the mutation completes or this will be reverted if it fails.
 

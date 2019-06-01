@@ -1,7 +1,7 @@
 ---
 title: "We made a fucking conference"
 description: "PHOTO OF VENUE HERE"
-date: "2019-06-01T15:46:07.333Z"
+date: "2019-06-01T15:49:06.217Z"
 categories: []
 published: false
 ---

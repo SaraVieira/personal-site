@@ -20,11 +20,11 @@ But the thing is I got pretty damn good a console.logging my way to the top so t
 
 What you are most used to is just writing:
 
-Embed placeholder 0.9229485734054097
+Embed placeholder 0.820984648146404
 
 Well there is at least 3 more I currently use besides log, we have `error` , `warn` and `info`
 
-Embed placeholder 0.30726894703469276
+Embed placeholder 0.8003498518198744
 
 ---
 
@@ -36,7 +36,7 @@ This is very useful if you already have a lot of logs all over the place, also w
 
 Ever wanted to run [https://jsperf.com/](https://jsperf.com/) without actually going to the website. This is exactly what timers do and you do it like so:
 
-Embed placeholder 0.9246406206948856
+Embed placeholder 0.9628581092965416
 
 ![How it looks on chrome](./asset-5.png)
 
@@ -48,7 +48,7 @@ Pretty sweet ah ?
 
 So let’s imagine you have an object like this:
 
-Embed placeholder 0.11840382619245071
+Embed placeholder 0.20581749787936232
 
 When you log it to the console you get something like this:
 
@@ -56,7 +56,7 @@ When you log it to the console you get something like this:
 
 If only switch the log to table like this:
 
-Embed placeholder 0.1150072659884851
+Embed placeholder 0.7459574580577513
 
 You get something way more awesome:
 
@@ -66,7 +66,7 @@ You get something way more awesome:
 
 Another useful feature you have in your average console is the group one, this one allows to groups logs in the same group, so if have something like this:
 
-Embed placeholder 0.2080216148946743
+Embed placeholder 0.46160034745393164
 
 I know this will never happen in real life but by doing this would just have all your logs shown like so:
 
@@ -75,13 +75,13 @@ I know this will never happen in real life but by doing this would just have all
 With groups you encapsulate these logs into the part of the code they belong.  
 By adding some lines of code you get something way more organized:
 
-Embed placeholder 0.6040497721104621
+Embed placeholder 0.07581459670670498
 
 ![](./asset-9.png)
 
 You can also collapse these groups by default for a cleaner view of what’s going on:
 
-Embed placeholder 0.09501308259585128
+Embed placeholder 0.621653481269415
 
 ![](./asset-10.png)
 
@@ -92,7 +92,7 @@ Turns out you don’t have to , there is a method called count on the console o
 
 Something like this:
 
-Embed placeholder 0.3104693158876568
+Embed placeholder 0.18257690324706477
 
 Would give you:
 
@@ -102,7 +102,7 @@ Would give you:
 
 You can also add css to your logs but only if the first argument is a string. To do this you need to prepend _%c_ to your text and then pass the css in the second argument, like so:
 
-Embed placeholder 0.1285335851202991
+Embed placeholder 0.180434360499528
 
 ![](./asset-12.png)
 

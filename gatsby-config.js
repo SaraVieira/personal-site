@@ -11,7 +11,7 @@ const configuration = {
   // a longer bio showing on the landing page of the blog
   bio: `Front-End Developer , Blogger , Drummer and TV Show Addict.`,
   author: 'Sara Vieira',
-  githubUrl: 'https://github.com/SaraVieira/personal-site',
+  githubUrl: 'https://github.com/',
   // replace this by the url where your website will be published
   siteUrl: 'http://localhost:8000',
   social: {

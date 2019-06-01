@@ -27,7 +27,7 @@ For this example I am going to use the [RandomUser API](https://randomuser.me/) 
 
 So let’s start by defining our Schema and it should look something like:
 
-Embed placeholder 0.3402101328336127
+Embed placeholder 0.18524143645356794
 
 Some of the return values from the API I don’t really want to return so I will ignore them.
 
@@ -35,11 +35,11 @@ Now let’s create our class where we will use `apollo-datasource-rest` and in h
 
 In it we have a constructor where we can define our base API url. Our file should look something like:
 
-Embed placeholder 0.23871111585688065
+Embed placeholder 0.6132876262660829
 
 Now that we have the basis of our class we need to define our functions and they will all have a signature close to this:
 
-Embed placeholder 0.9242330495706714
+Embed placeholder 0.8469691187084638
 
 So we create async functions that will fetch our data, give it any parameters that we want and from the parent `RESTDataSource` we have access to some methods to interact with API’s.
 
@@ -47,7 +47,7 @@ Besides the `get` method we also have the normal methods to allow for `POST`, `P
 
 Let’s create our function to get one single user:
 
-Embed placeholder 0.8288798277412475
+Embed placeholder 0.7925558298447732
 
 Now that we have this we can use it in our resolvers.
 
@@ -57,15 +57,15 @@ Moving back to our `index.js` when we initialise our `ApolloServer` there is an 
 
 This property takes a function that will return an object with all your dataSources so in our case our new `ApolloServer` instantiation will now look like:
 
-Embed placeholder 0.18409873637762342
+Embed placeholder 0.5498094511034592
 
 By passing it as a `dataSource` we now have access to it on all our resolvers as part of the third argument so in our resolver to get the user we need to call the function we created in our class like so:
 
-Embed placeholder 0.41068485226076
+Embed placeholder 0.318378011734604
 
 If you now try to run the `getUser` query like so:
 
-Embed placeholder 0.16205048004289013
+Embed placeholder 0.601059440270836
 
 You should already see some data
 
@@ -75,19 +75,19 @@ Let’s now code our `getUsers` function and in this one let’s also allow the 
 
 The endpoint for that is: _https://randomuser.me/api/?results=number_ so let’s code our function with some sensible defaults:
 
-Embed placeholder 0.6289805557158665
+Embed placeholder 0.04625346787087126
 
 So here we get a variable called people and assign it a default of 10 so if the user doesn’t pass a the argument we will just send 10 random people. This feature is called Default Parameters and you can read all about it at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
 Let’s now add a new function to our resolvers for query:
 
-Embed placeholder 0.2369839423055613
+Embed placeholder 0.16245618418704622
 
 In here we use the second parameter of the function and that’s because we get whatever the user passed as a parameter to the query.
 
 If you now run something like:
 
-Embed placeholder 0.1869843706152119
+Embed placeholder 0.17556144463322765
 
 You should get three random users.
 

@@ -1,7 +1,7 @@
 ---
 title: "Life is hard when your brain does not help"
 description: "This photo was taken last year when I went to a company retreat ."
-date: "2019-06-01T15:46:07.353Z"
+date: "2019-06-01T15:49:06.252Z"
 categories: []
 published: false
 ---

@@ -44,7 +44,7 @@ The `cjs` folder is for use with NPM and the one used when you import react with
 
 To start we need an initial HTML file. I use VSCode, so here, to create a simple HTML file you just need to type `!`and then `tab` and you will have a starter file to insert the two links with script tags. Mine looks like this:
 
-Embed placeholder 0.8537065293101851
+Embed placeholder 0.9959279401297849
 
 Let’s now write some react code!
 
@@ -56,7 +56,7 @@ JSX (JavaScript XML) may look confusing and magical but in reality it’s just s
 
 Knowing this, we can create a simple div that has some text inside and a class to be styled in CSS, like so:
 
-Embed placeholder 0.3858745220505355
+Embed placeholder 0.0472022623658126
 
 If you reload the page, nothing will happen. This is where `[react-dom](https://github.com/facebook/react/tree/master/packages/react-dom)` comes into play because react itself can be rendered into a lot of places, like native apps for iOS and Android, TV's, PDF and really anything you set your mind to.
 
@@ -67,11 +67,11 @@ If you reload the page, nothing will happen. This is where `[react-dom](https://
 
 In code this would look something like:
 
-Embed placeholder 0.2110003438490471
+Embed placeholder 0.5839420363628482
 
 If you reload the page, you can see our wrapper but it doesn’t really look nice so let’s add some CSS to it:
 
-Embed placeholder 0.5037295627509848
+Embed placeholder 0.6696639824603887
 
 And now you should see something like this when you open your index.html in your browser:
 
@@ -91,7 +91,7 @@ We should also consider that if we attach this state to a rendered element, this
 
 For our use case we will need am image property in our state that will have the source for our image. So our `Wrapper` should look something like:
 
-Embed placeholder 0.48583631233320435
+Embed placeholder 0.8934951547416721
 
 Wow! So this changed a lot so let’s through what is going on:
 
@@ -105,13 +105,13 @@ After creating our base class we set the initial state that will be changed with
 
 Next step is creating the image tag that will have our awesome puppy:
 
-Embed placeholder 0.43166967097812625
+Embed placeholder 0.5283791791945063
 
 We have seen this pattern before when creating our `Wrapper` component. The only thing we changed here from our `Wrapper` component is that we now receive an argument with all the props passed to the element. In the props object there is a parameter called source and set that as the `src` attribute of the image. We also don't pass any children as images don't really have any elements inside them.
 
 Now for the button we do something similar:
 
-Embed placeholder 0.84104871789409
+Embed placeholder 0.299770036223298
 
 Here we receive the a function that will be called when this button is clicked and will get another random puppy.
 
@@ -123,13 +123,13 @@ To place these two elements as children of the `Wrapper`, we need to pass them a
 
 Our `Wrapper` will look something like:
 
-Embed placeholder 0.6876581001852355
+Embed placeholder 0.7310674048472128
 
 Now it’s time we actually fetch the image and for that we will use the `[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)` api provided by most modern browsers.
 
 Let’s do that in a separate function and call it when the component mounts on the page:
 
-Embed placeholder 0.9314038755893275
+Embed placeholder 0.28095087142327135
 
 First thing we did was create a `getImage` function and in that function we get the image. When we got it we called `setState`, which is how you change the state of a component in React. Assigning the state to a new object won't work because React won't re-render the component.
 

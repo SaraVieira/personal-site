@@ -29,17 +29,17 @@ I’m gonna use the Apollo Server 2 to get us to create a simple GraphQL server 
 
 To start locally you will need to install `apollo-server` ,`graphql` and `nodemon` so you will need to run:
 
-Embed placeholder 0.6038077292033373
+Embed placeholder 0.9946810759038411
 
 After that create a package.json and add the following lines:
 
-Embed placeholder 0.5581234222240792
+Embed placeholder 0.42708401543478236
 
 Now we can start coding our GraphQL server and in my case, I will only have a Schema with two values: `image` and `notImage` so we can test our custom scalar.
 
 So our index.js should be something like:
 
-Embed placeholder 0.9335189294645796
+Embed placeholder 0.683918263471962
 
 if you now run `npm start` you will see something like this:
 
@@ -53,7 +53,7 @@ What our custom scalar will do is test if our link is actually an image and one 
 
 After installing it let’s start writing our function that will test if a value is actually an image:
 
-Embed placeholder 0.263259529991382
+Embed placeholder 0.4079227327085426
 
 What we are doing here is getting the image extension with `path.extname` and removing the first character as that is the dot. After this, we see if the extension we get back is part of the known image extensions and if so we return the value given to us otherwise we return null.
 
@@ -69,7 +69,7 @@ The parseValue and parseLiteral functions are needed if your Scalar is also an i
 
 In our case, we are going to use the serialize function to see validate our value but the same principles of validation apply to all of them.
 
-Embed placeholder 0.8443197031580785
+Embed placeholder 0.1233740265654053
 
 As you can see we assigned our Scalar to a constant and instantiated the `GraphQLScalarType` class.
 
@@ -79,11 +79,11 @@ In order to use our custom scalar, we need to do two things first.
 
 We need to define it in our Resolvers like so:
 
-Embed placeholder 0.8056792726893123
+Embed placeholder 0.47491760555480966
 
 And also call it at the beginning of our type definitions like so:
 
-Embed placeholder 0.21755558464397318
+Embed placeholder 0.014785753141555391
 
 If you now try to run our query you will get null in the `notImage` like so:
 
@@ -97,7 +97,7 @@ We can do that by importing `GraphQLError` from the graphql package and use it a
 
 Instead of returning null let’s now throw the error in our `isImage` function:
 
-Embed placeholder 0.9157394101575882
+Embed placeholder 0.6975908952927281
 
 If you now try to run the exact same query you will get an error either saying that it’s not a string or not an image depending on what you passed to the resolver.
 

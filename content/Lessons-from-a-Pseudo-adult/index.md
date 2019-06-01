@@ -1,7 +1,7 @@
 ---
 title: "Lessons from a Pseudo-adult"
 description: "A little backstory first so you know the point of this. My name is Sara, I am 23yr old Front-end Developer from Portugal and this past year…"
-date: "2019-06-01T15:46:08.249Z"
+date: "2019-06-01T15:49:06.684Z"
 categories: []
 published: false
 ---
